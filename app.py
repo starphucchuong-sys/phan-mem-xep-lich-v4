@@ -173,7 +173,7 @@ def xu_ly_xep_lich(file_data, si_so_max, ca_hoc_max):
         model.Maximize(sum(diem_thuong))
 
     solver = cp_model.CpSolver()
-    solver.parameters.max_time_in_seconds = 60.0 
+    solver.parameters.max_time_in_seconds = 300.0 
     ket_qua = solver.Solve(model)
 
     if ket_qua in [cp_model.OPTIMAL, cp_model.FEASIBLE]:
